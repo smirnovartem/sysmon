@@ -32,11 +32,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println(new File(Main.class.getProtectionDomain()
-                .getCodeSource()
-                .getLocation()
-                .getPath())
-                .getName());
         try {
             CommandLineParameters params = new CommandLineParameters(args);
             if (params.getLogType() == CommandLineParameters.LogType.HELP) {
