@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sysmon">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/sysmon_jar/sysmon.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
