@@ -20,7 +20,6 @@ public class TcpLogTask extends NetLogTask {
         try {
             soc = new Socket(hostname, port);
             pw = new PrintWriter(soc.getOutputStream(), true);
-            pw.println(Calendar.getInstance().getTime().toString());
             pw.println(Main.printUsage());
             System.out.println(Calendar.getInstance().getTime() + " Message sent to " + hostname + ":" + port);
         } catch (IOException e) {
