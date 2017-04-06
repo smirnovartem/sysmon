@@ -23,12 +23,12 @@ public class Main {
         long totalPhysicalMemorySize = operatingSystemMXBean.getTotalPhysicalMemorySize();
         long freePhysicalMemorySize = operatingSystemMXBean.getFreePhysicalMemorySize();
 
-        return "CPU Load %: " + String.format(Locale.US, "%.2f", operatingSystemMXBean.getSystemCpuLoad() * 100) + sep +
-                "Memory usage %: "
-                + String.format(Locale.US, "%.2f", (double) (totalPhysicalMemorySize - freePhysicalMemorySize) / totalPhysicalMemorySize * 100) + sep +
-                "Memory size in use (MB): " + Long.toString((totalPhysicalMemorySize - freePhysicalMemorySize) >> 20) + sep +
-                "Free memory size (MB): " + Long.toString(freePhysicalMemorySize >> 20) + sep +
-                "Total memory size (MB): " + Long.toString(totalPhysicalMemorySize >> 20);
+        return "cpu=" + String.format(Locale.US, "%.2f", operatingSystemMXBean.getSystemCpuLoad() * 100) + " " +
+                "memusage="
+                + String.format(Locale.US, "%.2f", (double) (totalPhysicalMemorySize - freePhysicalMemorySize) / totalPhysicalMemorySize * 100) + " " +
+                "memusagesize=" + Long.toString((totalPhysicalMemorySize - freePhysicalMemorySize) >> 20) + " " +
+                "freememsize=" + Long.toString(freePhysicalMemorySize >> 20) + " " +
+                "totalmemsize=" + Long.toString(totalPhysicalMemorySize >> 20);
     }
 
     public static void main(String[] args) {
